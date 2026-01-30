@@ -9,5 +9,8 @@ void main() {
     // modelMatrix -> position, rotation, scale of object
     // viewMatrix -> position, rotation, scale of camera
     // projectionMatrix -> projects our object to screen (aspect ratio & the perspective)
-    gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1.0);
+
+    vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+    vec4 projectedPosition = projectionMatrix * modelViewPosition;
+    gl_Position = projectedPosition;
 }
