@@ -1,9 +1,4 @@
-uniform mat4 projectionMatrix;
-uniform mat4 modelViewMatrix;
-uniform mat4 modelMatrix;
-uniform mat4 viewMatrix;
-
-attribute vec3 position;
+uniform float uTime;
 
 void main() {
     // modelMatrix -> position, rotation, scale of object
