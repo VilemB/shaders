@@ -36,7 +36,7 @@ const startApp = () => {
 
 
   // meshes
-  const geometry = new THREE.PlaneGeometry(2, 2, 10, 10)
+  const geometry = new THREE.SphereGeometry(1, 32, 32)
   const material = new THREE.ShaderMaterial({
     vertexShader,
     fragmentShader,
