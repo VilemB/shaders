@@ -42,6 +42,10 @@ const startApp = () => {
     fragmentShader,
   })
 
+  material.uniforms.uTime = { value: 0.0 }
+  material.uniforms.uRadius = { value: 0.5 }
+  material.uniforms.uTexture = { value: new THREE.TextureLoader().load()}
+
   const ico = new THREE.Mesh(geometry, material)
   scene.add(ico)
 
